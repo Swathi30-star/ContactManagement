@@ -1,0 +1,29 @@
+<h1>Contact Management</h1>
+<div class="card my-5">
+  <div class="contact">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="th">Id</th>
+          <th scope="th">FirstName</th>
+          <th scope="col">LastName</th>
+		  <th scope="col">PhoneNumber</th>
+		  <th scope="col">Avatar</th>
+		  <th scope="col">Department</th>
+		 
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr *ngFor="let contact of contacts">
+          <td>{{ contact.id }}</td>
+          <td>{{ contact.firstName }}</td>
+		  <td>{{ contact.lastName }}</td>
+		  <td>{{ contact.phoneNumber }}</td>
+          <td><img [src]="contact.avatar || 'https://via.placeholder.com/50'" alt="Avatar" class="avatar" /></td>
+		  <td>{{ contact.department }}</td>
+        </tr>
+      </tbody>
+    </table>
+ </div>
+   
+  
